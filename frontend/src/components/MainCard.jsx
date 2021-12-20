@@ -55,7 +55,7 @@ export default function MainCard() {
         <Container>
             <Card>
                 <CardBanner>
-                    PMKN Balance: {pmknBalance ? Number.parseFloat(ethers.utils.formatEther(pmknBalance)).toFixed(3).toString() : "0"}
+                    CC Balance: {pmknBalance ? Number.parseFloat(ethers.utils.formatEther(pmknBalance)).toFixed(3).toString() : "0"}
                 </CardBanner>
                 <AlignBox>
                     <StakeBox />
