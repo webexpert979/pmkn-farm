@@ -155,7 +155,7 @@ export default function StakeBox() {
                 <Banner>
                     <TopBanner>
                     <Img src={MarkDai} alt="DAI logo"/>
-                            DAI (1 PMKN / Day)
+                            DAI (1 CC / Day)
                     </TopBanner>
                 </Banner>
                 <AlignInput>

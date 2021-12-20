@@ -123,7 +123,7 @@ export default function LotteryBox() {
                     <Circle>
                         Prize Pool: 
                         <div>
-                            {lotteryBalance ? lotteryBalance : "0"} PMKN
+                            {lotteryBalance ? lotteryBalance : "0"} CC
                         </div>
                     </Circle>
                 </BottomBanner>

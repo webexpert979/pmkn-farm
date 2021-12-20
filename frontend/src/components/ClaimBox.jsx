@@ -111,7 +111,7 @@ export default function StakeBox() {
             <Banner>
                 <TopBanner>
                     <div>
-                        { parseFloat(accruing + unrealized).toFixed(3) } PMKN
+                        { parseFloat(accruing + unrealized).toFixed(3) } CC
                     </div>
                 </TopBanner>
             </Banner>

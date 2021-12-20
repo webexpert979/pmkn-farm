@@ -127,7 +127,7 @@ return(
                                 Your Number(s): {_userNFTs}
                             </Li>
                             <Li>
-                                Lottery Pool: {lotteryPoolAmount} PMKN
+                                Lottery Pool: {lotteryPoolAmount} CC
                             </Li>
                         </ul>
                         </DivBody>

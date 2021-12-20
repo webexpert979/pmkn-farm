@@ -7,9 +7,11 @@ import PmknToken from "./abis/PmknToken.json"
 import JackOLantern from "./abis/JackOLantern.json"
 import Lottery from "./abis/Lottery.json"
 import ERC20 from "./abis/ERC20.json"
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 import { UserProvider } from "./context/UserContext"
 import { ContractProvider } from "./context/ContractContext"
+import Web3Modal from "web3modal"
 
 import Main from "./components/Main";
 
@@ -192,6 +194,13 @@ function App() {
      */
 
     const loadUser = useCallback(async() => {
+        const web3Modal = new Web3Modal({
+            network: "kovan",
+            cacheProvider: true,
+            providerOptions
+            })
+        const connection = await web3Modal.connect()
+        const provider = new ethers.providers.Web3Provider(connection)
         let accounts = provider.getSigner()
         let account = await accounts.getAddress()
         return account
@@ -396,7 +405,25 @@ function App() {
         loadLotteryCount,
         loadLotteryPool,
     ])
-
+    let providerOptions;
+    providerOptions = {
+    metamask: {
+    id: "injected",
+    name: "MetaMask",
+    type: "injected",
+    check: "isMetaMask"
+    },
+    walletconnect: {
+        package: WalletConnectProvider, // required
+        options: {
+          infuraId: "8c661edd6d764e1e95fd0318054d331c",
+          rpc: {
+            5426: 'https://kovan.infura.io/v3/8c661edd6d764e1e95fd0318054d331c',
+          },
+          network: "kovan", // --> this will be use to determine chain id 56
+        }
+        }
+    };
     return (
         <Container>
           <ContractProvider value={contractState}>

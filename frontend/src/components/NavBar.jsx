@@ -182,7 +182,7 @@ export default function NavBar() {
             <MetaContainer>
                 <Container>
                     <Title>
-					<img src="{logo}" width="300" height="60" />
+					<img src={logo} width="300" height="60" />
 					</Title>
                     <SubContainer>
                         {isOwner ? ownerComponent : null}

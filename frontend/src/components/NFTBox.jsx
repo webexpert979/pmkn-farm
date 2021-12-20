@@ -98,7 +98,7 @@ export default function NFTBox() {
             <BodyDiv>
                 <ul>
                     <Li>
-                        Purchase a Jack-O'-Lantern NFT for 1 PMKN
+                        Purchase a Jack-O'-Lantern NFT for 1 CC
                     </Li>
                     <Li>
                         Each minted Jack-O'-Lantern NFT doubles as a lottery ticket
@@ -116,7 +116,7 @@ export default function NFTBox() {
                 <BottomBanner>
                     <Circle>
                         <div>
-                            Cost: 1 PMKN
+                            Cost: 1 CC
                         </div>
                     </Circle>
                 </BottomBanner>
