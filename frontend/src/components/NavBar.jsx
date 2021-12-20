@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 
 import { useUser } from "../context/UserContext"
 import { useContract } from "../context/ContractContext"
+import logo from "./logo.png"
 
 const MetaContainer = styled.div`
     height: 6rem;
@@ -180,7 +181,9 @@ export default function NavBar() {
     return(
             <MetaContainer>
                 <Container>
-                    <Title>Pmkn Farm</Title>
+                    <Title>
+					<img src="{logo}" width="300" height="60" />
+					</Title>
                     <SubContainer>
                         {isOwner ? ownerComponent : null}
                         <NFTButton onClick={handleNFT}>
